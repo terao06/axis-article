@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="620" viewBox="0 0 1500 620" role="img" aria-labelledby="title desc">
+  <title id="title">画像比較型の顔認証フロー</title>
+  <desc id="desc">登録画像と認証画像を補正し、画像情報の類似度を比較して本人判定する流れ</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#eef4ff"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#2563eb"/></marker>
+    <style>.t{font-family:'Noto Sans JP','Yu Gothic',sans-serif;fill:#172033}.h{font-size:30px;font-weight:700}.l{font-size:20px;font-weight:700}.s{font-size:16px}.box{fill:#fff;stroke:#94a3b8;stroke-width:2}.a{stroke:#2563eb;stroke-width:4;fill:none;marker-end:url(#arrow)}.face{fill:#dbeafe;stroke:#60a5fa;stroke-width:2}</style>
+  </defs>
+  <rect width="1500" height="620" rx="24" fill="url(#bg)"/>
+  <g transform="translate(0 25)">
+  <text class="t h" x="60" y="65" transform="translate(0 -25)">画像比較型の顔認証</text>
+  <text class="t s" x="60" y="100" transform="translate(0 -25)">登録画像と認証画像の見た目を直接比較し、類似度から本人かどうかを判定する</text>
+
+  <rect class="box" x="60" y="100" width="220" height="130" rx="18"/>
+  <circle class="face" cx="115" cy="155" r="31"/><circle cx="104" cy="150" r="3" fill="#2563eb"/><circle cx="126" cy="150" r="3" fill="#2563eb"/><path d="M102 168q13 11 26 0" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text class="t l" x="157" y="147">登録画像</text><text class="t s" x="157" y="178">事前に撮影</text>
+
+  <rect class="box" x="60" y="405" width="220" height="130" rx="18"/>
+  <circle class="face" cx="115" cy="460" r="31"/><circle cx="104" cy="455" r="3" fill="#2563eb"/><circle cx="126" cy="455" r="3" fill="#2563eb"/><path d="M102 473q13 8 26 0" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text class="t l" x="157" y="452">認証画像</text><text class="t s" x="157" y="483">決済時に撮影</text>
+
+  <rect class="box" x="305" y="230" width="250" height="175" rx="18"/>
+  <text class="t l" x="363" y="276">画像の前処理</text>
+  <text class="t s" x="345" y="315">・顔領域を検出</text><text class="t s" x="345" y="345">・向きと大きさを補正</text><text class="t s" x="345" y="375">・明るさを調整</text>
+  <path class="a" d="M280 165H430V220"/><path class="a" d="M280 470H430V415"/>
+
+  <rect class="box" x="655" y="230" width="245" height="175" rx="18"/>
+  <text class="t l" x="713" y="276">画像を比較</text>
+  <text class="t s" x="691" y="315">画素・明るさ・輪郭・</text><text class="t s" x="698" y="345">顔部位の位置関係から</text><text class="t s" x="720" y="375">類似度を算出</text>
+  <path class="a" d="M555 318h90"/>
+
+  <polygon points="1080,235 1170,318 1080,401 990,318" fill="#e0ecff" stroke="#60a5fa" stroke-width="2"/>
+  <text class="t l" x="1038" y="308">閾値以上</text><text class="t s" x="1042" y="338">であるか</text>
+  <path class="a" d="M900 318h83"/>
+
+  <rect x="1270" y="283" width="200" height="70" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text class="t l" x="1309" y="325">本人と判定</text>
+  <path class="a" d="M1170 318h90"/><text class="t s" x="1205" y="305">はい</text>
+  <rect x="995" y="500" width="170" height="70" rx="15" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text class="t l" x="1030" y="542">認証失敗</text>
+  <path d="M1080 401v89" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/><text class="t s" x="1092" y="455">いいえ</text>
+  </g>
+</svg>

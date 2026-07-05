@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1235" height="620" viewBox="0 0 1235 620" role="img" aria-labelledby="title desc">
+  <title id="title">permitとtransferFromによるJPYC決済フロー</title>
+  <desc id="desc">利用者がオフチェーン署名し、リレイヤーが利用許可とJPYC移転を一つの取引として実行する流れ</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#eefbf6"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#059669"/></marker>
+    <style>.t{font-family:'Noto Sans JP','Yu Gothic',sans-serif;fill:#172033}.h{font-size:30px;font-weight:700}.l{font-size:21px;font-weight:700}.s{font-size:17px}.box{fill:#fff;stroke:#94a3b8;stroke-width:2}.a{stroke:#059669;stroke-width:4;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1235" height="620" rx="24" fill="url(#bg)"/>
+  <text class="t h" x="60" y="65">3. permit + transferFromによる決済</text>
+  <text class="t s" x="60" y="100">利用者はオフチェーン署名のみ。リレイヤーがガス代を負担できる</text>
+  <rect class="box" x="70" y="165" width="270" height="130" rx="18"/><text class="t l" x="122" y="212">利用者ウォレット</text><text class="t s" x="105" y="255">permit用データへ署名</text>
+  <rect class="box" x="465" y="165" width="270" height="130" rx="18"/><text class="t l" x="557" y="212">リレイヤー</text><text class="t s" x="500" y="255">署名を受領・ガス代を負担</text>
+  <path class="a" d="M340 230h115"/><text class="t s" x="350" y="207">1. 署名データ</text>
+  <rect x="340" y="385" width="520" height="145" rx="20" fill="#fff" stroke="#34d399" stroke-width="3"/>
+  <text class="t l" x="420" y="430">決済コントラクト：1トランザクション</text>
+  <rect x="385" y="460" width="185" height="45" rx="12" fill="#dcfce7"/><text class="t s" x="430" y="489">① permit</text>
+  <path class="a" d="M575 483h45"/>
+  <rect x="630" y="460" width="185" height="45" rx="12" fill="#dcfce7"/><text class="t s" x="654" y="489">② transferFrom</text>
+  <path class="a" d="M600 295v80"/><text class="t s" x="620" y="342">2. 決済取引を送信</text>
+  <rect class="box" x="985" y="392" width="240" height="130" rx="18"/><text class="t l" x="1074" y="440">加盟店</text><text class="t s" x="1050" y="482">JPYCを受領</text>
+  <path class="a" d="M860 457h115"/><text class="t s" x="863" y="440">3. JPYCを移転</text>
+  <rect x="70" y="555" width="1070" height="42" rx="11" fill="#e8f5ff" stroke="#38bdf8"/>
+  <text class="t s" x="125" y="582">前提：対象JPYCコントラクトが利用するpermit仕様に対応していることをABIで確認する</text>
+</svg>

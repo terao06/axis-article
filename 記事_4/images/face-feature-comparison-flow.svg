@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="840" viewBox="0 0 1900 840" role="img" aria-labelledby="title desc">
+  <title id="title">特徴量比較型の顔認証フロー</title>
+  <desc id="desc">登録画像と認証画像をAIモデルで特徴量へ変換し、特徴量の類似度から本人判定する流れ</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#eef4ff"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#2563eb"/></marker>
+    <style>.t{font-family:'Noto Sans JP','Yu Gothic',sans-serif;fill:#172033}.h{font-size:30px;font-weight:700}.l{font-size:20px;font-weight:700}.s{font-size:16px}.xs{font-size:14px}.box{fill:#fff;stroke:#94a3b8;stroke-width:2}.a{stroke:#2563eb;stroke-width:4;fill:none;marker-end:url(#arrow)}.face{fill:#dbeafe;stroke:#60a5fa;stroke-width:2}.vector{font-family:Consolas,monospace;font-size:14px;fill:#1d4ed8}</style>
+  </defs>
+  <rect width="1900" height="840" rx="24" fill="url(#bg)"/>
+  <text class="t h" x="60" y="65">特徴量比較型の顔認証</text>
+  <text class="t s" x="60" y="100">顔画像をAIモデルで数値化し、特徴量同士の距離または類似度から本人判定する</text>
+
+  <rect class="box" x="50" y="150" width="190" height="120" rx="18"/>
+  <circle class="face" cx="95" cy="202" r="29"/><circle cx="85" cy="197" r="3" fill="#2563eb"/><circle cx="105" cy="197" r="3" fill="#2563eb"/><path d="M84 214q11 9 22 0" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text class="t l" x="133" y="197">登録画像</text><text class="t xs" x="133" y="224">事前に撮影</text>
+  <rect class="box" x="50" y="370" width="190" height="120" rx="18"/>
+  <circle class="face" cx="95" cy="422" r="29"/><circle cx="85" cy="417" r="3" fill="#2563eb"/><circle cx="105" cy="417" r="3" fill="#2563eb"/><path d="M84 434q11 7 22 0" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <text class="t l" x="133" y="417">認証画像</text><text class="t xs" x="133" y="444">決済時に撮影</text>
+
+  <rect class="box" x="320" y="150" width="190" height="120" rx="18"/>
+  <text class="t l" x="362" y="195">画像の前処理</text><text class="t s" x="352" y="228">検出・位置合わせ</text>
+  <rect class="box" x="320" y="370" width="190" height="120" rx="18"/>
+  <text class="t l" x="362" y="415">画像の前処理</text><text class="t s" x="352" y="448">検出・位置合わせ</text>
+  <path class="a" d="M240 210h70"/><path class="a" d="M240 430h70"/>
+
+  <rect x="585" y="150" width="190" height="120" rx="18" fill="#e0ecff" stroke="#60a5fa" stroke-width="2"/>
+  <text class="t l" x="629" y="195">AIモデル</text><text class="t s" x="621" y="228">特徴を数値化</text>
+  <rect x="585" y="370" width="190" height="120" rx="18" fill="#e0ecff" stroke="#60a5fa" stroke-width="2"/>
+  <text class="t l" x="629" y="415">同じAIモデル</text><text class="t s" x="621" y="448">特徴を数値化</text>
+  <path class="a" d="M510 210h65"/><path class="a" d="M510 430h65"/>
+
+  <rect class="box" x="850" y="150" width="230" height="120" rx="18"/>
+  <text class="t l" x="897" y="190">登録特徴量</text><text class="vector" x="875" y="225">[0.12, -0.38, 0.71, ...]</text>
+  <rect class="box" x="850" y="370" width="230" height="120" rx="18"/>
+  <text class="t l" x="897" y="410">認証特徴量</text><text class="vector" x="875" y="445">[0.10, -0.35, 0.69, ...]</text>
+  <path class="a" d="M775 210h65"/><path class="a" d="M775 430h65"/>
+
+  <rect class="box" x="1100" y="285" width="230" height="70" rx="15"/>
+  <text class="t l" x="1133" y="315">特徴量を比較</text><text class="t xs" x="1136" y="339">距離・類似度を算出</text>
+  <path class="a" d="M1080 210h135v65"/><path class="a" d="M1080 430h135v-65"/>
+
+  <polygon points="1490,265 1575,320 1490,375 1405,320" fill="#e0ecff" stroke="#60a5fa" stroke-width="2"/>
+  <text class="t l" x="1446" y="312">閾値を</text><text class="t s" x="1446" y="339">満たすか</text>
+  <path class="a" d="M1330 320h65"/>
+  <rect x="1675" y="285" width="180" height="70" rx="15" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text class="t l" x="1705" y="327">本人と判定</text><path class="a" d="M1575 320h90"/><text class="t s" x="1610" y="305">はい</text>
+  <rect x="1400" y="500" width="180" height="70" rx="15" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text class="t l" x="1437" y="542">認証失敗</text><path d="M1490 375v115" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/><text class="t s" x="1505" y="440">いいえ</text>
+</svg>

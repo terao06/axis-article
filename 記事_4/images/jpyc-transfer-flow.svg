@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">transferによるJPYC決済フロー</title>
+  <desc id="desc">利用者がJPYCコントラクトを通じて加盟店へ直接送金する流れ</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#eef4ff"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#2563eb"/></marker>
+    <style>.t{font-family:'Noto Sans JP','Yu Gothic',sans-serif;fill:#172033}.h{font-size:30px;font-weight:700}.l{font-size:21px;font-weight:700}.s{font-size:17px}.box{fill:#fff;stroke:#94a3b8;stroke-width:2}.a{stroke:#2563eb;stroke-width:4;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1200" height="520" rx="24" fill="url(#bg)"/>
+  <text class="t h" x="60" y="65">1. transferによる直接決済</text>
+  <text class="t s" x="60" y="100">利用者自身が取引へ署名し、加盟店へJPYCを直接送金する</text>
+  <rect class="box" x="60" y="175" width="270" height="145" rx="18"/>
+  <text class="t l" x="112" y="225">利用者ウォレット</text><text class="t s" x="95" y="270">取引へ署名・ガス代を負担</text>
+  <rect class="box" x="530" y="175" width="270" height="145" rx="18"/>
+  <text class="t l" x="613" y="225">JPYC</text><text class="t s" x="575" y="270">トークンコントラクト</text>
+  <rect class="box" x="920" y="175" width="270" height="145" rx="18"/>
+  <text class="t l" x="971" y="225">加盟店ウォレット</text><text class="t s" x="975" y="270">1,000 JPYCを受領</text>
+  <path class="a" d="M330 248h190"/><text class="t s" x="340" y="225">1. transfer(加盟店, 金額)</text>
+  <path class="a" d="M800 248h110"/><text class="t s" x="808" y="225">2. 残高を移転</text>
+  <rect x="350" y="400" width="500" height="75" rx="15" fill="#e0ecff" stroke="#60a5fa" stroke-width="2"/>
+  <text class="t l" x="530" y="433">決済システム</text><text class="t s" x="410" y="460">Transferイベントを検知し、注文と照合</text>
+  <path d="M1055 320V437.5H850" stroke="#64748b" stroke-width="3" fill="none" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="620" viewBox="0 0 1350 620" role="img" aria-labelledby="title desc">
+  <title id="title">approveとtransferFromによるJPYC決済フロー</title>
+  <desc id="desc">利用者が利用上限を承認し、決済コントラクトが加盟店へJPYCを移転する流れ</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#f1f5ff"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0v6l9-3z" fill="#2563eb"/></marker>
+    <style>.t{font-family:'Noto Sans JP','Yu Gothic',sans-serif;fill:#172033}.h{font-size:30px;font-weight:700}.l{font-size:21px;font-weight:700}.s{font-size:17px}.box{fill:#fff;stroke:#94a3b8;stroke-width:2}.a{stroke:#2563eb;stroke-width:4;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect width="1350" height="620" rx="24" fill="url(#bg)"/>
+  <text class="t h" x="60" y="65">2. approve + transferFromによる決済</text>
+  <text class="t s" x="60" y="100">事前承認した範囲内で、決済コントラクトがJPYCを移転する</text>
+  <rect class="box" x="70" y="165" width="270" height="130" rx="18"/><text class="t l" x="122" y="212">利用者ウォレット</text><text class="t s" x="118" y="255">承認取引へ署名</text>
+  <rect class="box" x="590" y="165" width="270" height="130" rx="18"/><text class="t l" x="695" y="212">JPYC</text><text class="t s" x="655" y="255">Allowanceを記録</text>
+  <path class="a" d="M340 230h240"/><text class="t s" x="367" y="207">1. approve(決済先、上限額)</text>
+  <rect class="box" x="590" y="390" width="270" height="130" rx="18"/><text class="t l" x="645" y="438">決済コントラクト</text><text class="t s" x="625" y="480">注文・二重決済を検証</text>
+  <rect class="box" x="1020" y="390" width="270" height="130" rx="18"/><text class="t l" x="1071" y="438">加盟店ウォレット</text><text class="t s" x="1100" y="480">JPYCを受領</text>
+  <path class="a" d="M725 295v85"/><text class="t s" x="745" y="345">2. 承認額を確認</text>
+  <path class="a" d="M860 455h150"/><text class="t s" x="875" y="432">4. JPYCを移転</text>
+  <path class="a" d="M590 455H260V305"/><text class="t s" x="275" y="485">3. transferFrom(利用者, 加盟店, 金額)</text>
+  <rect x="70" y="555" width="1170" height="42" rx="11" fill="#fff4dc" stroke="#f59e0b"/>
+  <text class="t s" x="155" y="582">注意：無制限approveは避け、注文金額または必要な利用上限額に限定する</text>
+</svg>
